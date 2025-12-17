@@ -112,6 +112,21 @@ body {
 }
 
 @media(max-width: 768px) {
+    .carrossel {
+        width: 100%;
+    }
+
+    .card {
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .card ul {
+        padding: 1rem;
+    }
+
     .card-two {
         width: 170px;
         height: 160px;
