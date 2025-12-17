@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.carrossel {
+    position: relative;
+    padding: 2rem 2rem;
+}
+
+.card-box {
+    display: flex;
+    gap: 1rem;
+    padding: 0 5%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.card {
+    flex: 0 0 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-snap-align: center;
+    background: #E1E1E1;
+    border-radius: 1rem;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    font-size: 4rem;
+    font-weight: lighter;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav.left {
+    left: 0;
+}
+
+.nav.right {
+    right: 0;
+}
