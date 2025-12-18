@@ -1,3 +1,11 @@
+const options = document.getElementById('options')
+const burguer = document.getElementById('burguer')
+
+burguer.addEventListener('click', () => {
+    burguer.classList.toggle('active')
+    options.classList.toggle('active')
+})
+
 const track = document.querySelector('.card-box')
 
 document.querySelector('.right').onclick = () => {
@@ -11,16 +19,6 @@ document.querySelector('.right').onclick = () => {
 const box = document.querySelector('.box-card-two')
 const cards = box.children
 const dotsContainer = document.getElementById('dots')
-
-/* let index = 0
-
-Array.from(cards).forEach((_, i) => {
-    const dot = document.createElement('button')
-    dot.className = 'dot'
-    dot.onclick = () => goTo(i)
-    dotsContainer.appendChild(dot)
-}) */
-
 
 
 function updateDots() {

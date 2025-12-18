@@ -10,32 +10,40 @@
     <link rel="shortcut icon" href="asets/images/picpay-icon.jpg" type="image/x-icon">
     <title>Conta digital grátis e cartão de crédito sem anuidade</title>
 </head>
-<body class="pt-20">
+<body class="pt-18">
     <header>
         <nav>
-            <div class="flex py-4 px-4 md:px-8 fixed top-0 left-0 bg-white z-50">
-                <div class="flex justify-between items-center gap-8 text-md font-semibold text-neutral-900">
+            <div class="flex py-4 px-4 md:px-8 fixed top-0 left-0 border-b border-neutral-300 bg-white z-50 w-full">
+                <div class="flex justify-between items-center gap-8 w-full text-md font-semibold text-neutral-900 relative">
                     <img src="asets/images/picpay-logo.png" alt="PicPay Logo" class="w-[35%] md:w-[10%] cursor-pointer">
-                    <div class="hidden md:flex gap-8">
-                        <a href="#">Para você</a>
-                        <a href="#">Para sua Empresa</a>
-                        <a href="#">Sobre o PicPay</a>
-                        <a href="#">Central de Ajuda</a>
-                        <a href="#">Blog</a>
+                    <div class="options md:flex gap-6" id="options">
+
+                        <div class="actions md:hidden flex flex-col text-center gap-4 w-[90%] m-auto">
+                            <a href="#" class="text-green-800 text-lg underline rounded-lg p-2.5 hover:bg-[#E6F6F0] cursor-pointer">Área do cliente</a>
+                            <a href="#" class="text-green-800 md:text-base text-lg border-2 border-[#238662] rounded-xl py-2.5 px-8 cursor-pointer hover:bg-[#E6F6F0]">Abrir conta</a>
+                        </div>
+
+                        <div class="hidden md:flex gap-4">
+                            <a href="#">Para você</a>
+                            <a href="#">Para sua Empresa</a>
+                            <a href="#">Sobre o PicPay</a>
+                            <a href="#">Central de Ajuda</a>
+                            <a href="#">Blog</a>
+                        </div>
+
                     </div>
 
                     <div class="hidden md:flex gap-8">
                         <a href="#" class="text-green-800 text-lg underline rounded-lg p-2.5 hover:bg-[#E6F6F0] cursor-pointer">Área do cliente</a>
                         <a href="#" class="text-green-800 border-2 border-[#238662] rounded-xl py-2.5 px-8 cursor-pointer hover:bg-[#E6F6F0]">Abrir conta</a>
                     </div>
-                </div>
 
-                <div class="burguer flex flex-col justify-center items-center gap-1 md:hidden w-64 mr-2">
-                    <span class="bg-black w-full h-0.5"></span>
-                    <span class="bg-black w-full h-0.5"></span>
-                    <span class="bg-black w-full h-0.5"></span>
+                    <div class="burguer flex flex-col justify-between items-center gap-1 md:hidden w-8 h-4 mr-2 z-100 absolute top-0 right-0" id="burguer">
+                        <span class="bg-black w-full h-0.5 rounded-md"></span>
+                        <span class="bg-black w-full h-0.5 rounded-md"></span>
+                        <span class="bg-black w-full h-0.5 rounded-md"></span>
+                    </div>
                 </div>
-
             </div>
         </nav>
     </header>
@@ -63,7 +71,7 @@
                 </div>
 
                 <div class="order-1 md:order-2">
-                    <img src="asets/images/cards.webp" alt="Cards" class="">
+                    <img src="asets/images/cards.webp" alt="Cards">
                 </div>
             </div>
         </div>

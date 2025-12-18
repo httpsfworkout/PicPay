@@ -11,7 +11,61 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    /* overflow: hidden; */
+}
+
+.burguer span {
+    position: absolute;
+    left: 0;
+    transform-origin: center;
+}
+
+.burguer span:nth-child(1) {
+    top: 0;
+}
+
+.burguer span:nth-child(2) {
+    top: 50%; /* 50% do topo */
+    transform: translateY(-50%); /* -50% do topo */
+}
+
+.burguer span:nth-child(3) {
+    bottom: 0; 
+}
+
+.burguer.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.burguer.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burguer.active span:nth-child(3) {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 55px);
+    background: #fff;
+    color: #111111;
+    transform: translateY(-120%);
+    transition: transform 600ms ease-in-out;
+    z-index: -40;
+}
+
+.options.active {
+    transform: translateY(0);
 }
 
 .carrossel {
