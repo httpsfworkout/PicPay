@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="asets/images/picpay-icon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="asets/images/picpay-mod.png" type="image/x-icon">
     <title>Conta digital grátis e cartão de crédito sem anuidade</title>
 </head>
 <body class="pt-18">
     <header>
         <nav>
-            <div class="flex py-4 px-4 md:px-8 fixed top-0 left-0 border-b border-neutral-300 bg-white z-50 w-full">
-                <div class="flex justify-between items-center gap-8 w-full text-md font-semibold text-neutral-900 z-50 relative">
+            <div class="flex w-full py-3 px-4 md:px-10 fixed top-0 left-0 bg-white z-50">
+                <div class="flex justify-between items-center gap-4  w-full text-md font-semibold text-neutral-900 relative">
                     <img src="asets/images/picpay-logo.png" alt="PicPay Logo" class="w-[35%] md:w-[10%] cursor-pointer z-50">
 
                     <div class="options-mobile flex md:hidden flex-col justify-start items-start gap-4 fixed w-full" id="options-mobile">
@@ -132,11 +132,28 @@
                             <a href="#" class="text-green-800 md:text-base text-lg border-2 border-[#238662] rounded-xl py-2.5 px-8 cursor-pointer hover:bg-[#E6F6F0]">Abrir conta</a>
                         </div>
 
-                        <div class="hidden md:flex gap-8">
-                            <a href="#">Para você</a>
-                            <a href="#">Para sua Empresa</a>
-                            <a href="#">Sobre o PicPay</a>
-                            <a href="#">Central de Ajuda</a>
+                        <div class="hidden md:flex gap-4 text-neutral-700">
+
+                            <div class="about flex items-center gap-1 cursor-pointer">
+                                <a href="#">Para você</a>
+                                <i class="about-icon fa-solid fa-chevron-down"></i>
+                            </div>
+
+                            <div class="about flex items-center gap-1 cursor-pointer">
+                                <a href="#">Para sua Empresa</a>
+                                <i class="about-icon fa-solid fa-chevron-down"></i>
+                            </div>
+                            
+                            <div class="about flex items-center gap-1 cursor-pointer">
+                                <a href="#">Sobre o PicPay</a>
+                                <i class="about-icon fa-solid fa-chevron-down"></i>
+                            </div>
+
+                            <div class="about flex items-center gap-1 cursor-pointer">
+                                <a href="#">Central de Ajuda</a>
+                                <i class="about-icon fa-solid fa-chevron-down"></i>
+                            </div>
+
                             <a href="#">Blog</a>
                         </div>
 
@@ -147,7 +164,7 @@
                         <a href="#" class="text-green-800 border-2 border-[#238662] rounded-xl py-2.5 px-8 cursor-pointer hover:bg-[#E6F6F0]">Abrir conta</a>
                     </div>
 
-                    <div class="burguer flex flex-col justify-between items-center gap-1 md:hidden w-8 h-4 mr-2 z-100 absolute top-0 right-0" id="burguer">
+                    <div class="burguer flex flex-col justify-between items-center gap-1 md:hidden w-6 h-4 mr-2 z-100 absolute top-2px right-0" id="burguer">
                         <span class="bg-black w-full h-0.5 rounded-md"></span>
                         <span class="bg-black w-full h-0.5 rounded-md"></span>
                         <span class="bg-black w-full h-0.5 rounded-md"></span>
@@ -160,7 +177,7 @@
     <main>
         <div>
             <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="flex flex-col justify-center gap-6 order-2 md:order-1 md:py-0 py-4 px-4 bg-[#EAECE3]">
+                <div class="flex flex-col justify-center gap-6 order-2 md:order-1 md:py-0 py-4 px-4 md:px-8 bg-[#EAECE3]">
                     <h1 class="w-[75%] text-[#05271B] text-2xl md:text-5xl font-bold">Cartão de crédito que todo mundo pode ter!</h1>
                     <p class="w-[80%] md:w-full text-[#05271B] text-xl">Zero anuidade e até R$ 10 mil de limite.</p>
                 
@@ -203,10 +220,10 @@
         
                 <div class="carrossel">
 
-                    <button class="nav left">‹</button>
+                    <button class="navegation left"><i class="fa-solid fa-chevron-left"></i></button>
 
-                    <div class="card-box">
-                    <div class="card">
+                    <div class="card-box flex flex-row gap-4">
+                    <div class="card items-center gap-4 p-4 w-full rounded-2xl">
                         <div>
                             <img src="asets/images/black.webp" alt="Black card" class="w-[80%]">
                         </div>
@@ -221,7 +238,7 @@
                         </div>
                     </div>
         
-                    <div class="card">
+                    <div class="card items-center gap-4 p-4 w-full rounded-2xl">
                         <div>
                             <img src="asets/images/gold.webp" alt="Gold card" class="w-[80%]">
                         </div>
@@ -237,7 +254,7 @@
                         </div>
                     </div>
         
-                    <div class="card">
+                    <div class="card items-center gap-4 p-4 w-full rounded-2xl">
                         <div>
                             <img src="asets/images/platinum.webp" alt="Platinum card" class="w-[80%]">
                         </div>
@@ -254,7 +271,7 @@
                     </div>
                     </div>
 
-                    <button class="nav right">›</button>
+                    <button class="navegation right"><i class="fa-solid fa-chevron-right"></i></button>
 
                     <div class="flex w-full pt-12">
                         <button
@@ -282,7 +299,7 @@
                 </div>
 
                 <div class="flex justify-center items-center order-1 w-full">
-                    <img src="asets/images/account.webp" alt="Account PicPay" class="w-[90%] md:w-[60%] cursor-pointer hover:text-[#C2D3CC]">
+                    <img src="asets/images/account.webp" alt="Account PicPay" class="img-limit w-[90%] md:w-[60%] cursor-pointer hover:text-[#C2D3CC]">
                 </div>
             </div>
         </div>
@@ -435,129 +452,185 @@
 
     <footer class="bg-[#121212]">
     <div class="flex flex-col gap-4">
-        <div class=" text-[#e5e5e5] p-4 md:p-16 order-2">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-16">
-            <div class="flex flex-col">
-                <h2 class="text-xl font-semibold pb-4">Pra você</h2>
-                <a href="#" class="w-fit hover:underline">Conta digital</a>
-                <a href="#" class="w-fit hover:underline">Conta Epic</a>
-                <a href="#" class="w-fit hover:underline">Conta para menores</a>
-                <a href="#" class="w-fit hover:underline">Cartão de crédito</a>
-                <a href="#" class="w-fit hover:underline">Limite Extra</a>
-                <a href="#" class="w-fit hover:underline">Pix</a>
-                <a href="#" class="w-fit hover:underline">PicPay Antecipe</a>
-                <a href="#" class="w-fit hover:underline">Antecipação Meu INSS Vale +</a>
-                <a href="#" class="w-fit hover:underline">Assistência de Pagamentos</a>
-                <a href="#" class="w-fit hover:underline">Rendimento</a>
-                <a href="#" class="w-fit hover:underline">Antecipação FGTS</a>
-                <a href="#" class="w-fit hover:underline">Crédito do Trabalhador</a>
-                <a href="#" class="w-fit hover:underline">Empréstimo Consignado</a>
-                <a href="#" class="w-fit hover:underline">Cartão Pessoal</a>
-                <a href="#" class="w-fit hover:underline">Crédito com garantia de veículo</a>
-                <a href="#" class="w-fit hover:underline">Consórcio</a>
-                <a href="#" class="w-fit hover:underline">PicPay Invest</a>
-                <a href="#" class="w-fit hover:underline">Seguro Carteira Digital</a>
-                <a href="#" class="w-fit hover:underline">Seguro Celular</a>
-                <a href="#" class="w-fit hover:underline">PicPay Shop</a>
-                <a href="#" class="w-fit hover:underline">Multas e IPVA</a>
-                <a href="#" class="w-fit hover:underline">Seguro de Vida</a>
-                <a href="#" class="w-fit hover:underline">Chave do Milhão</a>
-            </div>
-
-            <div class="flex flex-col">
-                <h2 class="text-xl font-semibold pb-4">Para sua Empresa</h2>
-                <a href="#" class="w-fit hover:underline">PicPay Empresas</a>
-                <a href="#" class="w-fit hover:underline">Venda online</a>
-                <a href="#" class="w-fit hover:underline">Soluções para E-commerce</a>
-                <a href="#" class="w-fit hover:underline">Maquininhas Parceiras</a>
-                <a href="#" class="w-fit hover:underline">Link de Pagamento</a>
-                <a href="#" class="w-fit hover:underline">Promoções PicPay</a>
-                <a href="#" class="w-fit hover:underline">PicPay Ads</a>
-                <a href="#" class="w-fit hover:underline">PicPay Benefícios</a>
-                <a href="#" class="w-fit hover:underline">Antecipação de recebíveis</a>
-            </div>
-
-            <div class="flex flex-col">
-                <h2 class="text-xl font-semibold pb-4">Sobre nós</h2>
-                <a href="#" class="w-fit hover:underline">Carreiras</a>
-                <a href="#" class="w-fit hover:underline">Sala de Imprensa</a>
-                <a href="#" class="w-fit hover:underline">Open Finance</a>
-                <a href="#" class="w-fit hover:underline">Ética e Compliance</a>
-                <a href="#" class="w-fit hover:underline">Política de Privacidade</a>
-                <a href="#" class="w-fit hover:underline">Portal de Privacidade - Exerça seus Direitos</a>
-                <a href="#" class="w-fit hover:underline">Política de Segurança da Informação</a>
-                <a href="#" class="w-fit hover:underline">Police Cyber Security</a>
-                <a href="#" class="w-fit hover:underline">Regras e Parâmetros de Atuação</a>
-                <a href="#" class="w-fit hover:underline">Relatório GRSAC e RTIS</a>
-                <a href="#" class="w-fit hover:underline">Relatório GRSAC</a>
-                <a href="#" class="w-fit hover:underline">Política PRSAC</a>
-                <a href="#" class="w-fit hover:underline">Política PLD</a>
-                <a href="#" class="w-fit hover:underline">AML Policy</a>
-                <a href="#" class="w-fit hover:underline">Estrutura de Gerenciamento de Riscos</a>
-                <a href="#" class="w-fit hover:underline">Política de Privacidade para Candidatos</a>
-                <a href="#" class="w-fit hover:underline">Demonstrações Financeiras</a>
-                <a href="#" class="w-fit hover:underline">Correspondente Bancário</a>
-                <a href="#" class="w-fit hover:underline">Sistema de informação de crédito</a>
-            </div>
-
-            <div class="flex flex-col">
-                <h2 class="text-xl font-semibold pb-4">Informações</h2>
-                <a href="#" class="w-fit hover:underline">Central de Ajuda</a>
-                <a href="#" class="w-fit hover:underline">Canais de atendimento</a>
-                <a href="#" class="w-fit hover:underline">Ouvidoria</a>
-                <a href="#" class="w-fit hover:underline">Taxas e tarifas</a>
-                <a href="#" class="w-fit hover:underline">Regras e Procedimento de Remuneração</a>
-                <a href="#" class="w-fit hover:underline">Renegociação de dívidas</a>
-                <a href="#" class="w-fit hover:underline">Regulamentos</a>
-
-                <h2 class="text-xl font-semibold py-4">Explore</h2>
-                <a href="#" class="w-fit hover:underline">Blog</a>
-                <a href="#" class="w-fit hover:underline">Banco Original</a>
-                <a href="#" class="w-fit hover:underline">Investidor</a>
-            </div>
-
-            <div>
-                <h2 class="text-xl font-semibold">SAC</h2>
-                
-                <div>
-                    <p>0800 025 8000</p>
-                    <p>Disponível todos os dias, 24h.</p>
+        <div class=" text-[#e5e5e5] p-4 md:p-16 md:order-1 order-2">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 md:px-16">
+                <div class="flex flex-col">
+                    <div class="accordion flex flex-col">
+        
+                        <div class="">
+                            <button class="toggle accordion-header flex items-center w-full md:w-fit cursor-pointer">
+                                <span class="text-xl font-semibold">Pra você</span>
+                                <i class="icon fa-solid fa-chevron-down text-xl md:m-1.5 ml-auto"></i>
+                            </button>
+                        </div>
+        
+                        <div class="accordion-content flex flex-col gap-2.5 w-full font-light text-[18px]">
+                            <a href="#" class="w-fit hover:underline">Conta digital</a>
+                            <a href="#" class="w-fit hover:underline">Conta Epic</a>
+                            <a href="#" class="w-fit hover:underline">Conta para menores</a>
+                            <a href="#" class="w-fit hover:underline">Cartão de crédito</a>
+                            <a href="#" class="w-fit hover:underline">Limite Extra</a>
+                            <a href="#" class="w-fit hover:underline">Pix</a>
+                            <a href="#" class="w-fit hover:underline">PicPay Antecipe</a>
+                            <a href="#" class="w-fit hover:underline">Antecipação Meu INSS Vale +</a>
+                            <a href="#" class="w-fit hover:underline">Assistência de Pagamentos</a>
+                            <a href="#" class="w-fit hover:underline">Rendimento</a>
+                            <a href="#" class="w-fit hover:underline">Antecipação FGTS</a>
+                            <a href="#" class="w-fit hover:underline">Crédito do Trabalhador</a>
+                            <a href="#" class="w-fit hover:underline">Empréstimo Consignado</a>
+                            <a href="#" class="w-fit hover:underline">Cartão Pessoal</a>
+                            <a href="#" class="w-fit hover:underline">Crédito com garantia de veículo</a>
+                            <a href="#" class="w-fit hover:underline">Consórcio</a>
+                            <a href="#" class="w-fit hover:underline">PicPay Invest</a>
+                            <a href="#" class="w-fit hover:underline">Seguro Carteira Digital</a>
+                            <a href="#" class="w-fit hover:underline">Seguro Celular</a>
+                            <a href="#" class="w-fit hover:underline">PicPay Shop</a>
+                            <a href="#" class="w-fit hover:underline">Multas e IPVA</a>
+                            <a href="#" class="w-fit hover:underline">Seguro de Vida</a>
+                            <a href="#" class="w-fit hover:underline">Chave do Milhão</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
-                    <h2 class="text-xl font-semibold pt-8">SAC em Libras</h2>
-                    <p>Acesse o nosso atendimento ao SAC em libras, disponível em dias úteis das 10h às 16h.</p>
+        
+                <div class="accordion flex flex-col">
+        
+                    <div class="">
+                        <button class="toggle accordion-header flex items-center w-full md:w-fit cursor-pointer">
+                            <span class="text-xl font-semibold">Para sua Empresa</span>
+                            <i class="icon fa-solid fa-chevron-down md:m-1.5 ml-auto"></i>
+                        </button>
+                    </div>
+        
+                    <div class="accordion-content flex flex-col gap-2.5 w-full font-light text-[18px]">
+                        <a href="#" class="w-fit hover:underline">PicPay Empresas</a>
+                        <a href="#" class="w-fit hover:underline">Venda online</a>
+                        <a href="#" class="w-fit hover:underline">Soluções para E-commerce</a>
+                        <a href="#" class="w-fit hover:underline">Maquininhas Parceiras</a>
+                        <a href="#" class="w-fit hover:underline">Link de Pagamento</a>
+                        <a href="#" class="w-fit hover:underline">Promoções PicPay</a>
+                        <a href="#" class="w-fit hover:underline">PicPay Ads</a>
+                        <a href="#" class="w-fit hover:underline">PicPay Benefícios</a>
+                        <a href="#" class="w-fit hover:underline">Antecipação de recebíveis</a>
+                    </div>
                 </div>
-
-                <div>
-                    <h2 class="text-xl font-semibold pt-8">SAC PicPay Empresas - PJ</h2>
-                    <p>4003 3163 ou</p>
-                    <p>0800 882 3163</p>
-                    <p>Disponível de segunda a domingo, atendimento 24h.</p>
+        
+                <div class="accordion flex flex-col">
+        
+                    <div class="">
+                        <button class="toggle accordion-header flex items-center w-full md:w-fit cursor-pointer">
+                            <span class="text-xl font-semibold">Sobre nós</span>
+                            <i class="icon fa-solid fa-chevron-down md:m-1.5 ml-auto text-xl"></i>
+                        </button>
+                    </div>
+        
+                    <div class="accordion-content flex flex-col gap-2.5 w-full font-light text-[18px]">
+                        <a href="#" class="w-fit hover:underline">Carreiras</a>
+                        <a href="#" class="w-fit hover:underline">Sala de Imprensa</a>
+                        <a href="#" class="w-fit hover:underline">Open Finance</a>
+                        <a href="#" class="w-fit hover:underline">Ética e Compliance</a>
+                        <a href="#" class="w-fit hover:underline">Política de Privacidade</a>
+                        <a href="#" class="w-fit hover:underline">Portal de Privacidade - Exerça seus Direitos</a>
+                        <a href="#" class="w-fit hover:underline">Política de Segurança da Informação</a>
+                        <a href="#" class="w-fit hover:underline">Police Cyber Security</a>
+                        <a href="#" class="w-fit hover:underline">Regras e Parâmetros de Atuação</a>
+                        <a href="#" class="w-fit hover:underline">Relatório GRSAC e RTIS</a>
+                        <a href="#" class="w-fit hover:underline">Relatório GRSAC</a>
+                        <a href="#" class="w-fit hover:underline">Política PRSAC</a>
+                        <a href="#" class="w-fit hover:underline">Política PLD</a>
+                        <a href="#" class="w-fit hover:underline">AML Policy</a>
+                        <a href="#" class="w-fit hover:underline">Estrutura de Gerenciamento de Riscos</a>
+                        <a href="#" class="w-fit hover:underline">Política de Privacidade para Candidatos</a>
+                        <a href="#" class="w-fit hover:underline">Demonstrações Financeiras</a>
+                        <a href="#" class="w-fit hover:underline">Correspondente Bancário</a>
+                        <a href="#" class="w-fit hover:underline">Sistema de informação de crédito</a>
+                    </div>
                 </div>
-
-                <div>
-                    <h2 class="text-xl font-semibold pt-8">Ouvidoria</h2>
-                    <p>0800 025 2000</p>
-                    <p>Disponível em dias úteis, das 9h às 18h</p>
+        
+                <div class="accordion flex flex-col">
+        
+                    <div class="">
+                        <button class="toggle accordion-header flex items-center w-full md:w-fit cursor-pointer">
+                            <span class="text-xl font-semibold">Informações</span>
+                            <i class="icon fa-solid fa-chevron-down md:m-1.5 ml-auto text-xl"></i>
+                        </button>
+                    </div>
+        
+                    <div class="accordion-content flex flex-col gap-2.5 w-full font-light text-[18px]">
+                        <a href="#" class="w-fit hover:underline">Central de Ajuda</a>
+                        <a href="#" class="w-fit hover:underline">Canais de atendimento</a>
+                        <a href="#" class="w-fit hover:underline">Ouvidoria</a>
+                        <a href="#" class="w-fit hover:underline">Taxas e tarifas</a>
+                        <a href="#" class="w-fit hover:underline">Regras e Procedimento de Remuneração</a>
+                        <a href="#" class="w-fit hover:underline">Renegociação de dívidas</a>
+                        <a href="#" class="w-fit hover:underline">Regulamentos</a>
+                    </div>
                 </div>
-
-                <div>
-                    <h2 class="text-xl font-semibold pt-8">Formulário de Ouvidoria</h2>
-                    <p>Acesse nosso atendimento online <a href="#" class="underline">clicando aqui</a>.</p>
-                    <p>Disponível todos os dias, 24 horas.</p>
+        
+                <div class="accordion flex flex-col">
+        
+                    <div class="">
+                        <button class="toggle accordion-header flex items-center w-full md:w-fit cursor-pointer">
+                            <span class="text-xl font-semibold">Explore</span>
+                            <i class="icon fa-solid fa-chevron-down md:m-1.5 ml-auto text-xl"></i>
+                        </button>
+                    </div>
+        
+                    <div class="accordion-content flex flex-col gap-2.5 w-full font-light text-[18px]">
+                        <a href="#" class="w-fit hover:underline">Blog</a>
+                        <a href="#" class="w-fit hover:underline">Banco Original</a>
+                        <a href="#" class="w-fit hover:underline">Investidor</a>
+                    </div>
+                </div>
+        
+                <div class="accordion flex flex-col">
+        
+                    <div class="">
+                        <button class="toggle accordion-header flex items-center w-full md:w-fit cursor-pointer">
+                            <span class="text-xl font-semibold">SAC</span>
+                            <i class="icon fa-solid fa-chevron-down md:m-1.5 ml-auto text-xl"></i>
+                        </button>
+                    </div>
+        
+                    <div class="accordion-content flex flex-col gap-2.5 w-full font-light text-[18px]">
+                        <div>
+                            <p>0800 025 8000</p>
+                            <p>Disponível todos os dias, 24h.</p>
+                        </div>
+        
+                        <div>
+                            <h2 class="text-xl font-semibold pt-8">SAC em Libras</h2>
+                            <p>Acesse o nosso atendimento ao SAC em libras, disponível em dias úteis das 10h às 16h.</p>
+                        </div>
+        
+                        <div>
+                            <h2 class="text-xl font-semibold pt-8">SAC PicPay Empresas - PJ</h2>
+                            <p>4003 3163 ou</p>
+                            <p>0800 882 3163</p>
+                            <p>Disponível de segunda a domingo, atendimento 24h.</p>
+                        </div>
+        
+                        <div>
+                            <h2 class="text-xl font-semibold pt-8">Ouvidoria</h2>
+                            <p>0800 025 2000</p>
+                            <p>Disponível em dias úteis, das 9h às 18h</p>
+                        </div>
+        
+                        <div>
+                            <h2 class="text-xl font-semibold pt-8">Formulário de Ouvidoria</h2>
+                            <p>Acesse nosso atendimento online <a href="#" class="underline">clicando aqui</a>.</p>
+                            <p>Disponível todos os dias, 24 horas.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-16 md:order-2 order-1">
             <div class="flex flex-col items-center md:items-start gap-4">
-                <img src="asets/images/picpay-logo-white.png" alt="PicPay Logo" class="w-[30%] md:w-[25%]">
+                <img src="asets/images/picpay-logo-white.png" alt="PicPay Logo" class="w-[40%] md:w-[25%]">
                 
                 <div class="flex gap-6">
                     <i class="fa-brands fa-facebook text-2xl text-[#238662] cursor-pointer"></i>
-                    <i class="fa-brands fa-instagram text-2xl text-[#238662] cursor-pointer"></i>
+                    <i class="fa-brands fa-instagram text-2xl text-[#238662] cursor-pointer" id="instagram" title="Creator"></i>
                     <i class="fa-brands fa-tiktok text-2xl text-[#238662] cursor-pointer"></i>
                     <i class="fa-brands fa-x-twitter text-2xl text-[#238662] cursor-pointer"></i>
                     <i class="fa-brands fa-youtube text-2xl text-[#238662] cursor-pointer"></i>
@@ -567,13 +640,35 @@
 
             <div>
                 <div class="flex justify-center items-center gap-4">
-                    <img src="asets/images/app-store.png" alt="App Store" class="w-[30%] cursor-pointer">
-                    <img src="asets/images/google-play.png" alt="Google Play" class="w-[30%] cursor-pointer">
+                    <div class="flex justify-center items-center gap-1 h-16 py-1.5 bg-[#1D1D1B] rounded-lg cursor-pointer">
+                        <div class="w-[30%]">
+                            <img src="asets/images/apple-footer.png" alt="App Store" class="w-fit">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <span class="text-xs">Disponível na</span>
+                            <span class="text-xl">App Store</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-1 h-16 py-1.5 bg-[#1D1D1B] rounded-lg cursor-pointer">
+                        <div class="w-[20%]">
+                            <img src="asets/images/google-play-store-footer.png" alt="Google Play" class="w-fit">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="text-xs">Disponível no</div>
+                            <div class="text-xl">Google Play</div>
+                        </div>
+                    </div>
+
+                    <!-- <img src="asets/images/app-store.png" alt="App Store" class="w-[30%] cursor-pointer">
+                    <img src="asets/images/google-play.png" alt="Google Play" class="w-[30%] cursor-pointer"> -->
                 </div>
             </div>
         </div>
     </div>
-        <div class="bg-[#252525] p-6">
+        <div class="bg-[#252525] p-6 order-1 md:order-2">
             <div class="flex flex-col justify-center items-center gap-2 text-[#f5f5f5]">
                 <span>&copy; 2025 PicPay Instituição de Pagamento S/A. CNPJ: 22.896.431/0001-10</span>
                 <span>Av. Manuel Bandeira, 291 - Bloco A - Vila Leopoldina, São Paulo - SP, 05317-020</span>

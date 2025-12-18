@@ -4,6 +4,9 @@
 :root {
     --options-bg: #ffffff;
     --options-text: #111111;
+    --bg-card: #E1E1E1;
+    --dot: #A7CFC0;
+    --dot-active: #f5f5f5;
 }
 
 * {
@@ -63,6 +66,14 @@ body {
     transform: translateY(0);
 }
 
+.about-icon {
+    transition: transform 300ms ease;
+}
+
+.about:hover .about-icon {
+    transform: rotate(180deg);
+}
+
 .accordion-content {
     max-height: 0;
     overflow-y: auto;
@@ -88,8 +99,7 @@ body {
 }
 
 .card-box {
-    display: flex;
-    gap: 1rem;
+    padding: 0 .5rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
@@ -100,34 +110,30 @@ body {
     flex: 0 0 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    scroll-snap-align: center;
-    background: #E1E1E1;
-    border-radius: 1rem;
+    scroll-snap-align: start;
+    background: var(--bg-card);
 }
 
-.nav {
+.navegation {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 40%;
+    transform: translateY(-40%);
     background: none;
-    font-size: 3rem;
+    font-size: 1.5rem;
     border: 0;
     cursor: pointer;
-    color: #333;
+    color: #383838;
 }
 
-.nav:hover {
-    color: #555;
+.navegation:hover {
+    color: #5b5b5b;
 }
 
-.nav.left {
+.navegation.left {
     left: 0;
 }
 
-.nav.right {
+.navegation.right {
     right: 0;
 }
 
@@ -170,12 +176,24 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #A7CFC0;
+    background: var(--dot);
     cursor: pointer;
 }
 
 .dot.active {
-    background: #f5f5f5;
+    background: var(--dot-active);
+}
+
+.img-limit {
+    transition: filter 300ms ease;
+}
+
+.img-limit:hover {
+    filter: brightness(105%) contrast(105%);
+}
+
+#instagram:hover {
+    color: #e5e5e5;
 }
 
 @media(max-width: 768px) {
