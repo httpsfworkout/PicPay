@@ -10,6 +10,8 @@
       "Courier New", monospace;
     --color-green-800: oklch(44.8% 0.119 151.328);
     --color-green-900: oklch(39.3% 0.095 152.535);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-neutral-300: oklch(87% 0 0);
     --color-neutral-400: oklch(70.8% 0 0);
     --color-neutral-900: oklch(20.5% 0 0);
@@ -30,6 +32,7 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --font-weight-light: 300;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-md: 0.375rem;
@@ -228,8 +231,17 @@
   .m-auto {
     margin: auto;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-14 {
+    margin-top: calc(var(--spacing) * 14);
+  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
+  }
+  .ml-auto {
+    margin-left: auto;
   }
   .flex {
     display: flex;
@@ -285,6 +297,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -294,11 +309,17 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -411,6 +432,9 @@
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
@@ -453,10 +477,6 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -465,9 +485,19 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .text-\[22px\] {
+    font-size: 22px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -490,6 +520,12 @@
   }
   .text-\[\#f5f5f5\] {
     color: #f5f5f5;
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
   }
   .text-green-800 {
     color: var(--color-green-800);
@@ -649,6 +685,11 @@
       align-items: flex-start;
     }
   }
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
   .md\:gap-20 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 20);
@@ -712,6 +753,12 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
+  .md\:text-5xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
   .md\:text-base {
     @media (width >= 48rem) {
       font-size: var(--text-base);
@@ -724,6 +771,10 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+}
+:root {
+  --options-bg: #ffffff;
+  --options-text: #111111;
 }
 * {
   box-sizing: border-box;
@@ -758,24 +809,32 @@ body {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
-.options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  position: fixed;
-  top: 55px;
+.options-mobile {
+  top: 60px;
   left: 0;
-  width: 100%;
   height: calc(100vh - 55px);
-  background: #fff;
-  color: #111111;
-  transform: translateY(-120%);
+  background: var(--options-bg);
+  color: var(--options-text);
+  transform: translateY(-100%);
   transition: transform 600ms ease-in-out;
-  z-index: -40;
+  z-index: -50;
 }
-.options.active {
+.options-mobile.active {
   transform: translateY(0);
+}
+.accordion-content {
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 300ms ease;
+}
+.accordion.active .accordion-content {
+  max-height: 500px;
+}
+.icon {
+  transition: transform 300ms ease;
+}
+.accordion.active .icon {
+  transform: rotate(180deg);
 }
 .carrossel {
   position: relative;

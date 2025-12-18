@@ -2,7 +2,8 @@
 @import "tailwindcss";
 
 :root {
-
+    --options-bg: #ffffff;
+    --options-text: #111111;
 }
 
 * {
@@ -24,8 +25,8 @@ body {
 }
 
 .burguer span:nth-child(2) {
-    top: 50%; /* 50% do topo */
-    transform: translateY(-50%); /* -50% do topo */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .burguer span:nth-child(3) {
@@ -47,25 +48,37 @@ body {
     transform: translateY(-50%) rotate(-45deg);
 }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    position: fixed;
-    top: 55px;
+.options-mobile {
+    top: 60px;
     left: 0;
-    width: 100%;
     height: calc(100vh - 55px);
-    background: #fff;
-    color: #111111;
-    transform: translateY(-120%);
+    background: var(--options-bg);
+    color: var(--options-text);
+    transform: translateY(-100%);
     transition: transform 600ms ease-in-out;
-    z-index: -40;
+    z-index: -50;
 }
 
-.options.active {
+.options-mobile.active {
     transform: translateY(0);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow-y: auto;
+    transition: max-height 300ms ease;
+}
+
+.accordion.active .accordion-content {
+    max-height: 500px;
+}
+
+.icon {
+    transition: transform 300ms ease;
+}
+
+.accordion.active .icon {
+    transform: rotate(180deg);
 }
 
 .carrossel {
